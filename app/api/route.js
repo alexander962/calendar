@@ -7,7 +7,7 @@ export async function POST(req) {
   if (req.method === 'POST') {
     req.defaultCors = true;
     const { data } = await req.json();
-    const directoryPath = './';
+    const directoryPath = './tmp';
     if (!fs.existsSync(directoryPath)) {
       fs.mkdirSync(directoryPath);
     }
