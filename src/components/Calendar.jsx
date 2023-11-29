@@ -1,6 +1,6 @@
 'use client';
 
-import { scheduleDataOuter } from '../../data/calendarData';
+import { scheduleDataOuter } from '../../calendarData';
 import {
   ScheduleComponent,
   Day,
