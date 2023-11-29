@@ -12,10 +12,10 @@ export async function POST(req) {
       fs.mkdirSync(directoryPath);
     }
 
-    const filePath = path.join(directoryPath, 'calendarData.js');
+    const filePath = path.join(directoryPath, 'calendarData.json');
 
     try {
-      fs.writeFileSync(filePath, `export const scheduleDataOuter = ${JSON.stringify(data)};`);
+      fs.writeFileSync(filePath, `${JSON.stringify(data)}`);
       console.log('Data saved successfully!');
     } catch (error) {
       console.error('Error saving data:', error);
